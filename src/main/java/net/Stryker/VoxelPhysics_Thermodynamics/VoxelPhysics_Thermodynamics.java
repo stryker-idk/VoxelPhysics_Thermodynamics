@@ -1,8 +1,9 @@
-package net.Stryker.placeholder;
+package net.Stryker.VoxelPhysics_Thermodynamics;
 
 import com.mojang.logging.LogUtils;
-import net.Stryker.placeholder.block.ModBlocks;
-import net.Stryker.placeholder.item.ModItems;
+import net.Stryker.VoxelPhysicsAPI.PhysicsType.PhysicsType;
+import net.Stryker.VoxelPhysics_Thermodynamics.block.ModBlocks;
+import net.Stryker.VoxelPhysics_Thermodynamics.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
@@ -14,21 +15,21 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-
+import org.slf4j.LoggerFactory;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(placeholder.MOD_ID)
-public class placeholder
+@Mod(VoxelPhysics_Thermodynamics.MOD_ID)
+public class VoxelPhysics_Thermodynamics
 {
-    public static final String MOD_ID = "placeholder";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final String MOD_ID = "voxelphysics_thermodynamics";
+    private static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 
 
 
 
-    public placeholder(FMLJavaModLoadingContext context)
+    public VoxelPhysics_Thermodynamics(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
 

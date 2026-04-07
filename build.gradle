@@ -6,10 +6,10 @@ plugins {
 }
 
 version = '0.0.1-1.20'
-group = 'net.Stryker.placeholder'
+group = 'net.Stryker.VoxelPhysics_Thermodynamics'
 
 base {
-    archivesName = 'placeholder'
+    archivesName = 'voxelphysics_thermodynamics'
 }
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
@@ -90,11 +90,27 @@ minecraft {
         client {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', mod_id
+            mods {
+                //voxelphysics_api {
+                //    mods {file('libs/voxelphysics_api-1.0.0.jar')}
+                //}
+                voxelphysics_thermodynamics {
+                    source sourceSets.main
+                }
+            }
         }
 
         server {
             property 'forge.enabledGameTestNamespaces', mod_id
             args '--nogui'
+            mods {
+                //voxelphysics_api {
+                //    mods {file('libs/voxelphysics_api-1.0.0.jar')}
+                //}
+                voxelphysics_thermodynamics {
+                    source sourceSets.main
+                }
+            }
         }
 
         // This run config launches GameTestServer and runs all registered gametests, then exits.
@@ -123,9 +139,9 @@ repositories {
 
     // If you have mod jar dependencies in ./libs, you can declare them as a repository like so.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:flat_dir_resolver
-    // flatDir {
-    //     dir 'libs'
-    // }
+    flatDir {
+        dir 'libs'
+    }
 }
 
 dependencies {
@@ -150,6 +166,8 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+
+    implementation fg.deobf("net.stryker:voxelphysics_api:0.0.3-1.20")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
