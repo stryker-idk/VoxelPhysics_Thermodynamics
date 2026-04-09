@@ -1,4 +1,4 @@
 package net.Stryker.VoxelPhysics_Thermodynamics.Physics;
 
-public class BlockPropertyTypes {
+public class Thermodynamics_BlockPropertyTypes {
 }

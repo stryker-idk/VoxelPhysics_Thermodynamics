@@ -3,7 +3,6 @@ package net.Stryker.VoxelPhysics_Thermodynamics.Physics.temparature;
 import net.Stryker.VoxelPhysicsAPI.IRuleset;
 import net.Stryker.VoxelPhysicsAPI.LongIntMap;
 import net.Stryker.VoxelPhysicsAPI.PhysicsEngine;
-import net.Stryker.VoxelPhysics_Thermodynamics.Physics.PhysicsTypes;
 
 public class TemperatureRuleset implements IRuleset {
     @Override
