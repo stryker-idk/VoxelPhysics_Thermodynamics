@@ -29,10 +29,7 @@ public class VoxelPhysics_Thermodynamics
         Thermodynamics_PhysicsTypes.register();
 
         // 2. Register block properties
-        //Thermodynamics_BlockPropertyTypes.register();
-
-        // 3. Freeze registries
-
+        Thermodynamics_BlockPropertyTypes.register();
 
         LOGGER.info("Thermodynamics addon loaded. Registered {} physics types",
                 PhysicsTypeRegistry.count());

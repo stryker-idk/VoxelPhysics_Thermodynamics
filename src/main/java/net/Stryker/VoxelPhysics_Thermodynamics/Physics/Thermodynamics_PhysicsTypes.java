@@ -23,7 +23,7 @@ public class Thermodynamics_PhysicsTypes {
         );
 
         PRESSURE = new PhysicsType(
-                ResourceLocation.fromNamespaceAndPath("voxelphysics_thermodynamics", "pressure"), // <-- Fixed: was "temperature"
+                ResourceLocation.fromNamespaceAndPath("voxelphysics_thermodynamics", "pressure"),
                 new PressureRuleset(),
                 1,
                 new String[]{
@@ -38,7 +38,7 @@ public class Thermodynamics_PhysicsTypes {
                         MergeBehavior.ADD,
                         MergeBehavior.ADD,
                         MergeBehavior.ADD,
-                        MergeBehavior.ADD  // <-- Removed trailing comma
+                        MergeBehavior.ADD
                 }
         );
 
